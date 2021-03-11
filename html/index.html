@@ -1,0 +1,332 @@
+<html>
+<head>
+<title>CS 476/676 Project</title>
+<link href='http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" title="Default" href="styles/github.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
+
+<link rel="stylesheet" href="highlighting/styles/default.css">
+<script src="highlighting/highlight.pack.js"></script>
+
+<style type="text/css">
+body {
+	margin: 0px;
+	width: 100%;
+	font-family: 'Crimson Text', serif;
+	font-size: 20px;
+	background: #fcfcfc;
+}
+h1 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 28px;
+	margin: 25px 0px 0px 0px;
+	text-transform: lowercase;
+
+}
+
+h2 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 32px;
+	margin: 15px 0px 35px 0px;
+	color: #333;	
+	word-spacing: 3px;
+}
+
+h3 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 26px;
+	margin: 10px 0px 10px 0px;
+	color: #333;
+	word-spacing: 2px;
+}
+h4 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 22px;
+	margin: 10px 0px 10px 0px;
+	color: #333;
+	word-spacing: 2px;
+}
+
+h5 {
+	font-family: 'Nunito', sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	margin: 10px 0px 10px 0px;
+	color: #111;
+	word-spacing: 2px;
+}
+
+p, li {
+	color: #444;
+}
+
+a {
+	color: #DE3737;
+}
+
+.container {
+	margin: 0px auto 0px auto;
+	width: 960px;
+}
+
+#header {
+	background: #333;
+	width: 100%;
+}
+
+#headersub {
+	color: #ccc;
+	width: 960px;
+	margin: 0px auto 0px auto;
+	padding: 20px 0px 20px 0px;
+}
+
+.chart {
+	width: 480px;
+}
+.lol {
+	font-size: 16px;
+	color: #888;
+	font-style: italic;
+}
+.sep {
+	height: 1px;
+	width: 100%;
+	background: #999;
+	margin: 20px 0px 20px 0px;
+}
+.footer{
+	font-size: 16px;
+}
+.latex {
+	width: 100%;
+}
+
+.latex img {
+	display: block;
+	margin: 0px auto 0px auto;
+}
+
+pre {
+	font-family: 'Droid Sans Mono';
+	font-size: 14px;
+}
+
+td img {
+  vertical-align: middle;
+}
+
+#contents a {
+}
+</style>
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+<body>
+<div id="header" >
+<div id="headersub">
+<h1>Sheng Kai Liao <span style="color: #DE3737"></span></h1>
+</div>
+</div>
+<div class="container">
+<h2>CSC 476/676 AU / Homework 3 / Image Blending Using Pyramids</h2>
+
+
+<!--Q1 chunk-->
+<div style="clear:both">
+<h3>1.	(5pts) Plot both continuous and discrete signals of the function </h3>
+
+<p> 	For this question, I fristly set up a sample list x which contains the x axis coordinate I want to sample bewteen 0-50. Subsequently, I calculate the x with equation and store the result in y variable and discrete_data variable which are also lists. Then, I use 'plt.plot(x,y) to plot the signal' and 'plt.stem(x,discrete_data)' to plot the stem.</p>
+
+
+<h3>Results</h3>
+<div style="text-align: center; padding: 30px">
+
+<img src="Q1 img.png" />
+<p style="font-size: 14px;text-align: center;">Fig 1. Answer for Question 1</p>
+</div>
+ 
+<!--Q2 chunk-->
+<div style="clear:both">
+<h3>2.	(5pts) Consider a complex-valued signal. Can you plot the real and imaginary part Of the function when t have a range of (-0.02, 0.05)?  </h3>
+
+
+<div style="text-align: center; padding: 30px">
+<img src="Equation for Q2.png" />
+<p style="font-size: 14px">Fig 2.Equation for Q2</p>
+</div>
+
+<p> 	For this question, I fristly set up list t which contains 100 samples of the x axis coordinate I want to sample bewteen -0.02 - 0.05. Afterward, I calculate the t with equation and store the result in x. Final, I use 'x.real' to extra the real part in equation and 'plt.plot(t,x.real)' to plot the real part signal. Same as last step, I extra image part by 'x.imag' and use 'plt.plot(t,x.imag)' to plot the image part signal.</p>
+
+
+<h3>Results</h3>
+<div style="text-align: center; padding: 30px">
+
+<img src="Q2 img.png" />
+<p style="font-size: 14px;text-align: center;">Fig 3. Answer for Question 2</p>
+</div>
+
+<!--Q3 chunk-->
+<div style="clear:both">
+<h3>3.	(5pts) In this exercise, we want to generate the same plot as Slide No. 20 in the lecture9 slides (Figure 1.20 in Chapter SignalProcessing.pdf).  Figure see below.   </h3>
+
+
+<div style="text-align: center; padding: 30px">
+<img src="Example for Q3.png" />
+<p style="font-size: 14px">Fig 4.Example for Q3</p>
+</div>
+
+<p> 	For how the code work, I have added comments next to each code, please refer to it. For this part, we can observe that even the signal be translated or flipped the magnitude is still the same.</p>
+<!--#Q3 original single-->
+
+<table style="width:100%">
+<tr>
+    <th>Original signal</th>
+    <th>F[n]</th>
+    <th>|F[n]|</th>
+ </tr>
+<tr>
+<td style="text-align: center;">
+<img src="Original _ signal.PNG" width="100%"/>
+</td>
+<td style="text-align: center;">
+<img src="Original _ F[n].PNG"  width="100%"/>
+</td>
+<td style="text-align: center;">
+<img src="Original _ magnitude.PNG" width="100%"/>
+</td>
+</tr>
+</table>
+
+<!--#Q3 translated signal-->
+
+<table style="width:100%">
+<tr>
+    <th>Translated signal</th>
+    <th>F[n]</th>
+    <th>|F[n]|</th>
+ </tr>
+<tr>
+<td style="text-align: center;">
+<img src="Translated _ signal.PNG" width="100%"/>
+</td>
+<td style="text-align: center;">
+<img src="Translated _ F[n].PNG"  width="100%"/>
+</td>
+<td style="text-align: center;">
+<img src="Translated _ magnitude.PNG" width="100%"/>
+</td>
+</tr>
+</table>
+
+<!--#Q3 flipped signal-->
+
+
+<table style="width:100%">
+<tr>
+    <th>Flipped signal</th>
+    <th>F[n]</th>
+    <th>|F[n]|</th>
+ </tr>
+<tr>
+<td style="text-align: center;">
+<img src="Flipped _ signal.PNG" width="100%"/>
+</td>
+<td style="text-align: center;">
+<img src="Flipped _ F[n].PNG"  width="100%"/>
+</td>
+<td style="text-align: center;">
+<img src="Flipped _ magnitude.PNG" width="100%"/>
+</td>
+</tr>
+</table>
+<p style="text-align: center;font-size: 14px">Fig 5.result for Q3</p>
+
+
+<!--#Q4-->
+<div style="clear:both">
+<h3>4.	(5pts) Plot the Fourier transform of the following function for frequency below 50hz, using the numpy.fft</h3>
+
+
+<div style="text-align: center; padding: 30px">
+<img src="Equation for Q4.png" />
+<p style="font-size: 14px">Fig 6.Equation for Q4</p>
+</div>
+
+<p> 	In this answer, I used np.fft.fftfreq to set up the samples' frequency. Then I extra the single which frequency below 50HZ. The red line represents real part of fft and the green line represents the image part.</p>
+
+<div style="text-align: center; padding: 30px">
+<img src="Q4 img.png" />
+<p style="font-size: 14px">Fig 6.Result for Q4</p>
+</div>
+
+<!--#Q5-->
+<div style="clear:both">
+<h3>5.	(5pts) Create the following 2D sine wave grating patterns as images and show their 2D Fourier transforms of the three images. You must plot both thee input images in real domain and the Fourier domain. </h3>
+
+
+<div style="text-align: center; padding: 30px">
+<img src="Example for Q5.png" />
+<p style="font-size: 14px">Fig 7.Example for Q5</p>
+</div>
+
+<p> 	Follow the equation on textbook and translated the sine wave by "np.fft.fft", we got the results shown below. You can observe that the coordinate of dft is related to the question's [u,v].</p>
+
+
+
+<div style="text-align: center; padding: 30px">
+<img src="Q5 c.png" />
+<p style="font-size: 14px">Fig 8.Results for Question 5</p>
+</div>
+
+
+<!--#Q6-->
+<div style="clear:both">
+<h3>6.	(25pts) Pyramid Blending:   Write a program that takes an input two color images and a binary mask images and produces the Laplacian pyramid blend of the two images.</h3>
+
+<li>Construct the Laplacian pyramid for each image.</li>
+<li>Construct the Gaussian pyramid for the two mask images (the input image and its complement)</li>
+<li>Multiply each Laplacian image by its corresponding mask and sum the images </li>
+<li>Reconstruct the final image from the Blended Laplacian pyramid.</li>
+
+<p> 	As you can see, the first two of my results are merged and the last one is not. The reasons why two image can't merge seamless are:</p>
+<li>Two images color have too much different.</li>
+<li>The object size in the images are too different. (You can image that if we get a big apple and a small orange in first result.) </li>
+<li>The texture of both images are different. (You may refer to result 3.) </li>
+
+<table style="width:100%"> 
+
+<tr>
+<td style="text-align: center;">
+<img src="apple.jpg" width="20%"/>
+<img src="orange.jpg" width="20%"/>
+<img src="mask.jpg" width="20%"/>
+<img src="apple orange blended.jpg" width="20%"/>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<img src="ocean1.jpg" width="20%"/>
+<img src="ocean2.jpg" width="20%"/>
+<img src="mask.jpg" width="20%"/>
+<img src="ocean blended.jpg" width="20%"/>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<img src="texture1.jpg" width="20%"/>
+<img src="texture4.jpg" width="20%"/>
+<img src="mask.jpg" width="20%"/>
+<img src="texture blended.jpg" width="20%"/>
+</td>
+</tr>
+</table>
+<p style="text-align: center;font-size: 14px">Fig 9.result for Q6 (From left to right is: img1, img2, mask and blended image)</p>
+
+</body>
+</html>
