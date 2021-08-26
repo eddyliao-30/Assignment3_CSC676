@@ -7,8 +7,8 @@ Example1:
 original images:
 
 <div class='origin1'>
-  <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/apple.jpg">
   <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/orange.jpg">
+  <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/apple.jpg">
 </div>
 
 The result:
@@ -21,8 +21,8 @@ Example2:
 original images:
 
 <div class='origin2'>
-  <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/ocean1.jpg">
   <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/ocean2.jpg">
+  <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/ocean1.jpg">
 </div>
 
 The result:
