@@ -1,7 +1,5 @@
 # Assignment3_CSC676
-
-
-# Image Blending Using Pyramids
+Image Blending Using Pyramids
 
 
 Example1:
@@ -37,8 +35,8 @@ Example3:
 original images:
 
 <div class='origin3'>
-  <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/texture1.jpg">
   <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/texture4.jpg">
+  <img width="200" height="200" src="https://github.com/eddyliao-30/Image_Blending_Using_Pyramids_CSC676_Computer_Vision/blob/main/texture1.jpg">
 </div>
 
 The result:
